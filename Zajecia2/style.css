@@ -1,0 +1,83 @@
+body {
+    background-color: rgba(248, 237, 235);
+}
+
+#main-body {
+    /*border: 2px dotted #444444;*/
+    background-color: rgba(248, 237, 235);
+}
+
+#naglowek {
+    width: 100%;
+    background-color: rgba(248, 237, 235);
+}
+
+#header {
+    padding: 10px;
+}
+
+#zaloguj {
+    /*border: 2px dotted #444444;*/
+    background-color: rgba(236, 228, 219);
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 28px;
+}
+
+#containers {
+    display: flex;
+}
+
+#menu {
+    width: 100%;
+    margin: auto;
+}
+
+.option {
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    /*border-right: 2px dotted #444444;*/
+    opacity: 0.8;
+}
+
+.option:hover {
+    background-color: rgba(250, 225, 221);
+    color: darkslategrey;
+    cursor: pointer;
+}
+
+#obszar-roboczy {
+    /*border: 2px dotted #444444;*/
+    height: 300px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    background-color: rgba(232, 232, 228);;
+}
+
+#boczny-obszar-roboczy {
+    height: 300px;
+    width: 200px;
+    /*border: 2px dotted #444444;*/
+    float: left;
+    padding: 10px;
+    background-color: rgba(216, 226, 220);
+}
+
+
+.dane {
+    text-align: center;
+    padding-top: 130px;
+}
+
+#date {
+    text-align: center;
+    padding-top: 130px;
+}
+
+.zaloguj {
+    text-align: right;
+}

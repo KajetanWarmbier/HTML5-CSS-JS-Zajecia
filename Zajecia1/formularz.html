@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz sEKO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/seko_logo.png" sizes="16x16">
+
+</head>
+<body id="body">
+    
+    <table id="table">
+        <tr>
+            <td colspan="3">
+                
+                    <img src="assets/seko_logo.png" alt="Logo" width="100px" style="float: left;">
+        
+                    <h1 style="padding-top: 10px; padding-left: 10px; float: left;">sEKO Company</h1>
+                
+            </td>
+        </tr>
+
+        <tr>
+            <td id="form" colspan="3">
+                
+                <div id="main_form">
+                
+                    <form> <!-- Brak podanego źródła dla form ze względu na brak podłączonego pliku php -->
+                        <fieldset>
+                            <legend>Dane personalne:</legend><br>
+                            <label for="imie">Imię:</label><br>
+                            <input type="text" id="imie" name="imie" value=""><br>
+                            <br>
+                            <label for="nazwisko">Nazwisko:</label><br>
+                            <input type="text" id="nazwisko" name="nazwisko" value=""><br>
+                            <br>
+                            <label for="mail">E-mail:</label><br>
+                            <input type="text" id="mail" name="mail" value=""><br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Uczęszczany wydział UG:</legend>
+                            <input type="radio" id="wzr" name="wydzial" value="wzr">
+                            <label for="wzr">Wydział Zarządzania</label><br>
+                            <input type="radio" id="ekonom" name="wydzial" value="ekonom">
+                            <label for="ekonom">Wydział Ekonomiczny</label><br>
+                            <input type="radio" id="fil" name="wydzial" value="fil">
+                            <label for="fil">Wydział Filologiczny</label><br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Zainteresowania:</legend>
+                            <input type="checkbox" id="games" name="interests" value="games">
+                            <label for="games">Gry Komputerowe</label><br>
+                            <input type="checkbox" id="sport" name="interests" value="sport">
+                            <label for="sport">Sport</label><br>
+                            <input type="checkbox" id="music" name="interests" value="music">
+                            <label for="music">Muzyka</label><br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>System operacyjny:</legend>
+                            <input list="operating_system" name="operating_system" placeholder="Windows 10" id="osInput">
+                            <datalist id="operating_system">
+                                <option value="Windows 10">
+                                <option value="Mac OS">
+                                <option value="Linux Ubuntu">
+                            </datalist>
+                        </fieldset>
+                        <br><br>
+
+
+
+
+                        <input type="submit" value="Wyślij" onclick="alert('Formularz Przesłany!')">
+                        <input type="reset" value="Czyść">
+                        <br><br>
+                        <a href=index.html id="backToIndex">Powrót do strony głównej.</a>
+
+                    </form>
+
+                </div>
+
+            </td>
+    </table>
+
+
+</body>
+</html>

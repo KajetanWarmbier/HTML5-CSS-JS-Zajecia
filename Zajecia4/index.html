@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript">
+        var WindowObjectReference;
+        
+        function openRequestedPopup()
+        {
+         WindowObjectReference = window.open("http://127.0.0.1:5500/Zajecia4/mapIndex.html",
+               "Mapka",
+               "resizable=yes,scrollbars=yes,status=yes");
+        }
+        </script>
+
+    <button class="myButton" onclick="openRequestedPopup()">OTWÓRZ MAPKĘ</button>
+</body>
+</html>

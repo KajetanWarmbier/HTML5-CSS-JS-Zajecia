@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zajecia2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main-body">
+
+        <div id="naglowek">
+            <div id="header">
+                <img src="assets/seko_logo.png" alt="seko-logo" height="50px">
+            </div>
+
+            <div id="menu">
+                <div class="option">Strona Główna</div>
+                <div class="option">Dystrybucje</div>
+                <div class="option">Instalacja</div>
+                <div class="option">Polecenia</div>
+                <div class="option">Linus Torvalds</div>
+                <div class="option">O Projekcie</div>
+            </div>
+
+            <br><br><br>
+
+            <div id="zaloguj">
+                <div class="zaloguj">Zaloguj</div>
+            </div>
+        </div>
+
+        <div id="containers">
+            <div id="boczny-obszar-roboczy">
+                <div class="dane">Kajetan Warmbier</div>
+            </div>
+
+            <div id="obszar-roboczy">
+                <div class="dane">Dowolny napis tekstowy.</div>
+            </div>
+
+            <div id="boczny-obszar-roboczy">
+
+                    <div id="date">
+                        <script>
+                            var today = new Date();
+                            var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+                            document.getElementById("date").innerHTML = date;
+                        </script>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

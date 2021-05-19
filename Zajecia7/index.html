@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>JSON Parse Map</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>	
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div id="id01"></div>
+
+<div id="mapid" style="width: 800px; height: 500px;"></div>
+<script>
+	var mymap = L.map('mapid').setView([-43.9509, -34.4618], 1);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 20,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+	const xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                    try {
+                        const resObj = JSON.parse(this.responseText);
+                        
+                        for (var i = 0; i<10; i++) {
+                            L.marker([resObj[i].address.geo.lat, resObj[i].address.geo.lng]).addTo(mymap)
+								.bindPopup(resObj[i].name + ", " + resObj[i].address.street + 
+								", " + resObj[i].address.suite + ", " + resObj[i].address.city + ", " + resObj[i].address.zipcode).openPopup();
+                        }
+                    } catch (e) {
+                        console.warn("Wystąpił problem z parsowaniem");
+                    }
+            } else {
+                console.warn("Nie udało się nawiązać połączenia z serverem.");
+            }
+        };
+
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+        xhr.send();
+
+</script>
+</body>
+</html>
