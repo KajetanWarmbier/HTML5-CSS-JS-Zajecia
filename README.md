@@ -24,8 +24,6 @@ Repository created in order to collect small web projects for course "**Języki 
 Created with:
 **HTML5/CSS3/JS**
 
-****
-
 ## Libraries
 Projects written in **VS Code** with use of open-source JS libraries.
 
