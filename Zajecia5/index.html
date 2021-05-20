@@ -1,15 +1,15 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
     <ul class="menu-context">
-        <li onclick="openRequestedPopup()"><a href="" id="ala">Mapka WZR</a></li>
-        <li onclick="showUserGeolocation()"><a href="" id="geo">Pokaż moje koordynaty.</a></li>
-        <li><a href="">Element menu 3</a></li>
-        <li><a href="">Element menu 4</a></li>
+        <li onclick="openMapIndex()"><a href="" id="ala">Mapka WZR</a></li>
+        <li onclick="openGeoIndex()"><a href="" id="geo">Pokaż moje koordynaty.</a></li>
     </ul>
 
     <div id="right">
@@ -18,53 +18,42 @@
 
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
+        const menu = document.querySelector('.menu-context');
 
-    const menu = document.querySelector('.menu-context');
-
-    function removeMenu() {
-        menu.style.left = '-9999px';
-        menu.style.top = '-9999px';
-    }
-
-    function rightButton(e) {
-        e.preventDefault();
-
-        if (e.button === 2) {
-            menu.style.left = e.pageX + 10 + 'px';
-            menu.style.top = e.pageY + 10 + 'px';
-        }
-    }
-
-    const block = document.querySelector('#right');
-    block.addEventListener('mousedown', rightButton);
-
-
-        var WindowObjectReference;
-        
-        function openRequestedPopup()
-        {
-         WindowObjectReference = window.open("mapIndex.html",
-               "Mapka",
-               "resizable=yes,scrollbars=yes,status=yes");
+        function removeMenu() {
+            menu.style.left = '-9999px';
+            menu.style.top = '-9999px';
         }
 
-        //Funkcja geolokalizacji nie działałą mi w żaden sposób. Nie jestem w stanie określić powodu.
-        function showUserGeolocation() {
-            if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(function(position){
-                let lat = position.coords.latitude;
-                let long = position.coords.longitude;
+        function rightButton(e) {
+            e.preventDefault();
 
-                alert(lat.toFixed(2)+"° , "+long.toFixed(2)+"°");
-            });
-            } else if (lat.toFixed() == 0 || long.toFixed() == 0){
-                alert("Twoja przeglądarka nie wspiera geolokacji.");
+            if (e.button === 2) {
+                menu.style.left = e.pageX + 10 + 'px';
+                menu.style.top = e.pageY + 10 + 'px';
             }
         }
 
+        const block = document.querySelector('#right');
+        block.addEventListener('mousedown', rightButton);
 
-</script>
+
+        var WindowObjectReference;
+
+        function openMapIndex() {
+            WindowObjectReference = window.open("mapIndex.html",
+                "Mapka",
+                "resizable=yes,scrollbars=yes,status=yes");
+        }
+
+        function openGeoIndex() {
+            WindowObjectReference = window.open("userGeolocation.html",
+                "Geolocation",
+                "resizable=yes,scrollbars=yes,status=yes");
+        }
+    </script>
 
 </body>
+
 </html>
