@@ -3,10 +3,10 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Index of Files](#index)
+* [Index of Files](#index-of-files)
 * [Technologies](#technologies)
 * [Libraries](#libraries)
-* [Example](#output-example)
+* [Example](#example)
 
 ## General info
 Repository created in order to collect small web projects for course "**Języki Skryptowe - HTML5 i JavaScript**".
