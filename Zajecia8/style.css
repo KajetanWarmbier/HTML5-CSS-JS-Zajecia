@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(0, 0%, 44%);
+}
+
+.header {
+    width: auto;
+    position: static;
+    background: #272727;
+    height: 50px;
+}
+
+.menu-btn {
+    position: fixed;
+    display: flex;
+    margin-top: 4px;
+    margin-left: 4px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.menu-btn-burger {
+    height: 4px;
+    width: 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.menu-btn-burger::before {
+    transform: translateY(8px)
+}
+
+.menu-btn-burger::after {
+    transform: translateY(-8px);
+}
