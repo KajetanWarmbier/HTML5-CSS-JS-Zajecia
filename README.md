@@ -19,6 +19,7 @@ Repository created in order to collect small web projects for course "**Języki 
 * [Zajęcia 5: zdarzenia dla myszki, menu kontekstowe, geolokalizacja](https://github.com/KajetanWarmbier/HTML5-CSS-JS-Zajecia/tree/master/Zajecia5)
 * [Zajęcia 6: zegar analogowy](https://github.com/KajetanWarmbier/HTML5-CSS-JS-Zajecia/tree/master/Zajecia6)
 * [Zajęcia 7: Ajax - XMLHttpRequest](https://github.com/KajetanWarmbier/HTML5-CSS-JS-Zajecia/tree/master/Zajecia7)
+* [Zajęcia 8: jQuery](https://github.com/KajetanWarmbier/HTML5-CSS-JS-Zajecia/tree/master/Zajecia8)
 
 ## Technologies
 Created with:
@@ -31,6 +32,7 @@ Library | Use
 ------------ | -------------
 Leaflet | Interactive maps.
 Geolocation API | Reading users geolocation.
+jQuery | Animation and event handling.
 
 
 ## Example
