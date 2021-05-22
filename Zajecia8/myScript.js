@@ -1,5 +1,14 @@
-function menuBtn() {
-    const menubtn = document.querySelector('.menu-btn-burger');
-    
-
-}
+$(document).ready(function(){
+    $('.menu-btn').click(function(){
+        $('.menu-hide').toggleClass('show');
+        $('#line-one').toggleClass('active');
+        $('#line-two').toggleClass('active');
+        $('#line-three').toggleClass('active');
+    });
+    $('a').click(function(){
+        $('.menu-hide').removeClass('show');
+        $('#line-one').removeClass('active');
+        $('#line-two').removeClass('active');
+        $('#line-three').removeClass('active');
+    });
+});
