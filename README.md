@@ -36,4 +36,4 @@ jQuery | Animation and event handling.
 
 
 ## Example
-**TO BE WRITTEN**
+![alt text]("navBar")
